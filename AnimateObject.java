@@ -1,3 +1,4 @@
+package hack2018;
 
 public class AnimateObject extends GameObject {
 	

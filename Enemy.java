@@ -1,4 +1,4 @@
-
+package hack2018;
 
 public class Enemy extends AnimateObject implements Interactable{
 	

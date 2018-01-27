@@ -1,3 +1,4 @@
+package hack2018;
 
 public class Physics {
 	public boolean intersecting(GameObject obj1, GameObject obj2) {

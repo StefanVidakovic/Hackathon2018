@@ -1,3 +1,4 @@
+package hack2018;
 
 public class Point implements Comparable<Point> {
 	int x;
