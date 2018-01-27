@@ -1,4 +1,4 @@
-package hack2018;
+
 
 import java.awt.image.BufferedImage;
 
@@ -11,8 +11,13 @@ public class GameObject {
 	int xsize;
 	int ysize;
 	
+	int xVel = 0;
+	int yVel = 0;
+	int xAcc = 0;
+	int yAcc = 0;
+	
 	Object imgSprite = null;
-	//BufferedImage img = null;
+	
 	public GameObject(Point bottomLeft,int xsize,int ysize) {
 		this.bottomLeftCorner = bottomLeft;
 		this.topLeftCorner.y = bottomLeft.y + ysize;
