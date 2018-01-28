@@ -14,8 +14,12 @@ class Main {
 	public static void main(String[] args) {
 		init();
 		while(true) {
+
+			p.debug();
 			readIO();
-			p.debug();//System.out.println(e);
+			e.verifyStack();
+			e.commitStack();
+			
 		}
 	}
 	

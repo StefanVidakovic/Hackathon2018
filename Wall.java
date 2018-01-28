@@ -10,10 +10,4 @@ public class Wall extends InanimateObject implements Interactable {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	public void interact(GameObject player) {
-		player.setxAcc(0);
-		player.setxVel(0);
-	}
-	
 }
