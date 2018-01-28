@@ -1,4 +1,4 @@
-package hack2018;
+
 
 public class PhysicsEngine {
 	public boolean isIntercepting(GameObject a, GameObject B) {

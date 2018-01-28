@@ -1,4 +1,3 @@
-package hack2018;
 
 import java.awt.image.BufferedImage;
 

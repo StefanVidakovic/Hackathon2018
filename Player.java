@@ -1,4 +1,4 @@
-package hack2018;
+
 
 public class Player extends AnimateObject implements Interactable{
 	
