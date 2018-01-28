@@ -1,4 +1,5 @@
 
+
 import java.awt.image.BufferedImage;
 
 public class GameObject {
@@ -10,14 +11,20 @@ public class GameObject {
 	int xsize;
 	int ysize;
 	
+	int xVel = 0;
+	int yVel = 0;
+	int xAcc = 0;
+	int yAcc = 0;
+	
 	Object imgSprite = null;
-	//BufferedImage img = null;
+	
 	public GameObject(Point bottomLeft,int xsize,int ysize) {
+		
 		this.bottomLeftCorner = bottomLeft;
-		this.topLeftCorner.y = bottomLeft.y + ysize;
-		this.bottomRightCorner.x = bottomLeft.x + xsize;
-		this.topRightCorner.x = bottomLeft.x + xsize;
-		this.topRightCorner.y = bottomLeft.y + ysize;
+		this.topLeftCorner = new Point(bottomLeft.x,bottomLeft.y + ysize);
+		this.bottomRightCorner = new Point(bottomLeft.x + xsize,bottomLeft.y);
+		this.topRightCorner = new Point(bottomLeft.x + xsize,bottomLeft.y+ysize);
+		
 	}
 	
 }
