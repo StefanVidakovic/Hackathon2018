@@ -13,11 +13,11 @@ public class PhysicsEngine {
 		return new Point(newX,newY);
 	}
 	public void verifyStack() {
-		while(!verificationStack.isEmpty()) {
+		while(!verificationStack.isEmpty()) { //verfication stack should strictly contain GameObjects with "newCoordinates" assigned
 			/*
 			 * CHECK FOR COLLISION
 			 */
-
+			
 			
 			commitStack.push(verificationStack.pop());
 		}
@@ -26,7 +26,7 @@ public class PhysicsEngine {
 		while(!commitStack.isEmpty()) {
 			GameObject t = commitStack.pop();
 			Point newPoint = calculateCords(t);
-			t.bottomLeftCorner = newPoint;
+			t.updateObject(newPoint);
 
 			if(Math.abs(t.xAcc) > 0.4){
 				t.xAcc /= 2;
@@ -42,7 +42,8 @@ public class PhysicsEngine {
 			 */
 			 
 		}
-
+	}
+	
 	public boolean intersecting(GameObject obstacle, GameObject player) {
 		if(obstacle.bottomLeftCorner.compareTo(player.newbottomLeftCorner)>0 //this means obj2 is "greater"
 				&&(obstacle.topLeftCorner.compareTo(player.newbottomLeftCorner)<0
@@ -96,5 +97,5 @@ public class PhysicsEngine {
 		//Return true, if need updateing.
 		//False if unchanged.
 		return false;
-
 	}
+}

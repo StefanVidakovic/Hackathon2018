@@ -39,17 +39,23 @@ public class GameObject {
 		this.topRightCorner = new Point(bottomLeft.x + xsize,bottomLeft.y+ysize);
 		
 	}
+	public void updateObject(Point bottomLeft) {
+		this.bottomLeftCorner = new Point(bottomLeft.x,bottomLeft.y);
+		this.topLeftCorner = new Point(bottomLeft.x,bottomLeft.y + this.ysize);
+		this.bottomRightCorner = new Point(bottomLeft.x + this.xsize,bottomLeft.y);
+		this.topRightCorner = new Point(bottomLeft.x + this.xsize,bottomLeft.y+this.ysize);
+	}
 
-	public int getxVel() {
+	public double getxVel() {
 		return this.xVel;
 	}
-	public int getyVel() {
+	public double getyVel() {
 		return this.yVel;
 	}
-	public int getxAcc() {
+	public double getxAcc() {
 		return this.xAcc;
 	}
-	public int getyAcc() {
+	public double getyAcc() {
 		return this.yAcc;
 	}
 	public void setxVel(int vel) {
