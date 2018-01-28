@@ -39,9 +39,7 @@ public class GameObject {
 		this.topRightCorner = new Point(bottomLeft.x + xsize,bottomLeft.y+ysize);
 		
 	}
-<<<<<<< HEAD
-	
-=======
+
 	public int getxVel() {
 		return this.xVel;
 	}
@@ -90,5 +88,5 @@ public class GameObject {
 	public Point getnewTopRight() {
 		return this.newtopRightCorner;
 	}
->>>>>>> origin/master
+
 }
