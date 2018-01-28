@@ -1,7 +1,7 @@
 public class PhysicsEngine {
 
 	public boolean intersecting(GameObject obj1, GameObject obj2) {
-		if(obj1.bottomLeftCorner.compareTo(obj2.bottomLeftCorner)>0
+		if(obj1.bottomLeftCorner.compareTo(obj2.bottomLeftCorner)>0 //this means obj2 is "greater"
 				&&(obj1.topLeftCorner.compareTo(obj2.bottomLeftCorner)<0
 						&&obj1.bottomRightCorner.compareTo(obj2.bottomLeftCorner)<0)) {
 			return true;
@@ -23,6 +23,9 @@ public class PhysicsEngine {
 		}
 		
 		return false;
+	}
+	public int touchingSide() {
+		return 0;
 	}
 	public boolean calculateNewLocation(GameObject a) {
 		//Return true, if need updateing.
