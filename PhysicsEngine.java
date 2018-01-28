@@ -23,11 +23,18 @@ public class PhysicsEngine {
 		}
 	}
 	public void commitStack() {
+		GameObject t = null;
 		while(!commitStack.isEmpty()) {
-			GameObject t = commitStack.pop();
+			t = commitStack.pop();
 			Point newPoint = calculateCords(t);
 			t.updateObject(newPoint);
 
+			/*
+			 * Send to GFX to update
+			 */
+			 
+		}
+		if(t != null) {
 			if(Math.abs(t.xAcc) > 0.4){
 				t.xAcc /= 2;
 				commitStack.push(t);
@@ -37,10 +44,6 @@ public class PhysicsEngine {
 				commitStack.push(t);
 			}
 			t.debug();
-			/*
-			 * Send to GFX to update
-			 */
-			 
 		}
 	}
 	
