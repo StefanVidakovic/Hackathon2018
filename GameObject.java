@@ -19,8 +19,6 @@ public class GameObject {
 	Object imgSprite = null;
 	
 	public GameObject(Point bottomLeft,int xsize,int ysize) {
-		
-		this.bottomLeftCorner = bottomLeft;
 		this.topLeftCorner = new Point(bottomLeft.x,bottomLeft.y + ysize);
 		this.bottomRightCorner = new Point(bottomLeft.x + xsize,bottomLeft.y);
 		this.topRightCorner = new Point(bottomLeft.x + xsize,bottomLeft.y+ysize);

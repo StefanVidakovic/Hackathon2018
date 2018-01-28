@@ -1,4 +1,5 @@
 
+
 public class Wall extends InanimateObject implements Interactable {
 	public Wall(Point bottomLeft,int xsize,int ysize) {
 		super(bottomLeft,xsize,ysize);
