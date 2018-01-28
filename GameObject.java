@@ -8,6 +8,12 @@ public class GameObject {
 	Point topLeftCorner;
 	Point bottomRightCorner;
 	Point topRightCorner;
+	
+	Point newbottomLeftCorner;
+	Point newbottomRightCorner;
+	Point newtopLeftCorner;
+	Point newtopRightCorner;
+	
 	int xsize;
 	int ysize;
 	
@@ -15,6 +21,7 @@ public class GameObject {
 	int yVel = 0;
 	int xAcc = 0;
 	int yAcc = 0;
+	
 	
 	Object imgSprite = null;
 	
@@ -50,5 +57,28 @@ public class GameObject {
 	public void setyAcc(int acc) {
 		this.yAcc = acc;
 	}
-	
+	public void setnewBottomLeft(Point p) {
+		this.newbottomLeftCorner = p;
+	}
+	public void setnewBottomRight(Point p) {
+		this.newbottomRightCorner = p;
+	}
+	public void setnewTopLeft(Point p) {
+		this.newtopLeftCorner = p;
+	}
+	public void setnewTopRight(Point p) {
+		this.newtopRightCorner = p;
+	}
+	public Point getnewBottomLeft() {
+		return this.newbottomLeftCorner;
+	}
+	public Point getnewTopLeft() {
+		return this.newtopLeftCorner;
+	}
+	public Point getnewBottomRight() {
+		return this.newbottomRightCorner;
+	}
+	public Point getnewTopRight() {
+		return this.newtopRightCorner;
+	}
 }
